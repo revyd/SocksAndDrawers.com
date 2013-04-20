@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-SocksAndDrawersCom::Application.config.secret_token = '3adab65d3be8c0f5f0071f4e34a5f59242dd41076e1f8bfc2a6c767ca1195a1aaf82660b7b55c71172b80483ad179e840889a7fab6725dd15cbe08fda76b8edb'
+SocksAndDrawersCom::Application.config.secret_token = 'bf9e44beea26c57985704ffdb93ccad11728a8725f88a5706a430bfe7f1eeb14233605bd807bb69e449111b752d2c81a0b30091394929bea8aa13494963bb8c4'
