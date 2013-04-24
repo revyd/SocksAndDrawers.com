@@ -10,6 +10,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "The account has been deleted."
+    redirect_to root_path
+  end
+
   def invite
     authorize! :invite, @user, :message => 'Not authorized as an administrator.'
     @user = User.find(params[:id])
