@@ -67,11 +67,11 @@ class ConfirmationsController < Devise::PasswordsController
 
   def do_confirm
     @confirmable.confirm!
-    @user = User.find(params[:id])
-    @user.add_role :user
     set_flash_message :notice, :confirmed
     sign_in_and_redirect(resource_name, @confirmable)
-  end
+    @user = User.find(params[:id])
+    @user.add_role :user
+end
 
   # The path used after resending confirmation instructions.
   def after_resending_confirmation_instructions_path_for(resource_name)
