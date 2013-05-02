@@ -1,23 +1,27 @@
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
   <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
-    <div class="modal-header">
-      <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Request Invitation</h3>
-    </div>
-    <div class="modal-body">
-      <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' %>
-    </div>
-    <div class="modal-footer">
-      <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
-      <a class="btn" data-dismiss="modal" href="#">Close</a>
-    </div>
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&#215;</a>
+    <h3>Request Invitation</h3>
+  </div>
+  <div class="modal-body">
+    <%= f.error_notification %>
+    <%= f.input :email, :placeholder => 'user@example.com' %>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
+    <a class="btn" data-dismiss="modal" href="#">Close</a>
+  </div>
   <% end %>
 </div>
 <div id="romance-copy" style="text-align: center; margin-top: 80px">
-  <h2>Want in?</h2>
-  <p>blah blah blah</p>
+  <h2>Socks de Résistance</h2>
+  <p>If you're like me then your socks (or at least one) constantly disappear into a dryer lint vortex. Either that or they inevitably begin to self-destruct, making them useless for anyone except toe-less and heel-less people. (I already have six sock puppets and that's more than a girl needs.) Either way, my socks seem to have it out for me (and the rest of humanity, I predict) But I've decided to fight back and I'm inviting you to join me!</p>
+  <p>Me and my sock warrior friends are developing a subscription program that makes us the boss of our socks and our drawers. People will sign up to have socks (of their size, style and quality choice) appear at their doorstep right when the other ones have started to disappear. Interested in joining the fight? Sign your name below and let your socks know who's boss. </p>
+  <p>(This doesn't require payment or subscription, just an indication of interest. Through unity we will conquer the Socks de Résistance.)</p>
+
+</p>
 </div>
 <div id="call-to-action" style="text-align: center; margin-top: 80px">
-  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Save my sock drawer!</a>
+  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Join Me!</a>
 </div>
